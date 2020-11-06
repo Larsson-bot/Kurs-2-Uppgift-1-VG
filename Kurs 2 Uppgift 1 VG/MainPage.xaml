@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="Kurs_2_Uppgift_1_VG.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Kurs_2_Uppgift_1_VG"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin="10,5">
+
+                <TextBox x:Name="tbxFirst" Header="Enter FirstName" PlaceholderText="FirstName" />
+                <TextBox x:Name="tbxLast" Header="Enter LastName" PlaceholderText="LastName"  />
+                <ComboBox x:Name="cbFormat" HorizontalAlignment="Stretch" Header="Choose Fileformat"   >
+                    <ComboBoxItem>Create .jsonfile</ComboBoxItem>
+                    <ComboBoxItem>Create.csvfile</ComboBoxItem>
+                    <ComboBoxItem>Create.xmlfile</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">Create.txtfile</ComboBoxItem>
+                </ComboBox>
+
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="10,5">
+                <TextBox x:Name="tbxAge" Header="Enter Age" PlaceholderText="Age" />
+                <TextBox x:Name="tbxCity" Header="Enter City" PlaceholderText="City" />
+            </StackPanel>
+
+
+          
+                <Button Grid.Row="1" Grid.Column="0"  Content="Create File" Height="70" HorizontalAlignment="Stretch"  Margin="50" Click="Button_Click">
+                
+            </Button>
+          
+            
+        </Grid>
+        <ListView x:Name="lwFiles" Grid.Column="1">
+            
+        </ListView>
+        </Grid>
+</Page>
